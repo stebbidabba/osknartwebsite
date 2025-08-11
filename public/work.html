@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work - Ósk n Art</title>
+    <link rel="stylesheet" href="minimal.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-row">
+                <a href="index.html" class="brand">Ósk n Art</a>
+                <nav class="primary-nav">
+                    <a href="about.html">About</a>
+                    <a href="work.html">Work</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="work">
+            <div class="container">
+                <h1 class="section-title">Work</h1>
+                <div class="category-filters">
+                  <button class="filter-btn active" data-category="recent">Recent</button>
+                  <button class="filter-btn" data-category="ethereal">Ethereal</button>
+                  <button class="filter-btn" data-category="earthy">Earthy</button>
+                  <button class="filter-btn" data-category="luminous">Luminous</button>
+                  <button class="filter-btn" data-category="organic">Organic</button>
+                  <button class="filter-btn" data-category="atmospheric">Atmospheric</button>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item large" data-series="aurora-whispers" data-categories="recent,ethereal,atmospheric">
+                        <img src="img/nr1/aurora-whispers-living-room.jpg" alt="Aurora Whispers - Living Room" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Aurora Whispers</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-series="nordic-light" data-categories="recent,luminous,ethereal">
+                        <img src="img/nr1/aurora-whispers-bedroom.jpg" alt="Nordic Light - Bedroom" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Nordic Light</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item tall" data-series="volcanic-textures" data-categories="recent,earthy,organic">
+                        <img src="img/nr1/aurora-whispers-office.jpg" alt="Volcanic Textures" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Volcanic Textures</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item wide" data-series="icelandic-dreams" data-categories="recent,ethereal,atmospheric">
+                        <img src="img/nr1/aurora-whispers-detail.jpg" alt="Icelandic Dreams" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Icelandic Dreams</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-series="midnight-sun" data-categories="recent,luminous,atmospheric">
+                        <img src="img/nr1/aurora-whispers-living-room.jpg" alt="Midnight Sun" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Midnight Sun</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item large" data-series="geothermal-waters" data-categories="earthy,organic,atmospheric">
+                        <img src="img/nr1/aurora-whispers-bedroom.jpg" alt="Geothermal Waters" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Geothermal Waters</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-series="glacier-movement" data-categories="ethereal,atmospheric">
+                        <img src="img/nr1/aurora-whispers-office.jpg" alt="Glacier Movement" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Glacier Movement</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item tall" data-series="basalt-columns" data-categories="earthy,organic">
+                        <img src="img/nr1/aurora-whispers-detail.jpg" alt="Basalt Columns" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Basalt Columns</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item wide" data-series="northern-lights" data-categories="ethereal,luminous,atmospheric">
+                        <img src="img/nr1/aurora-whispers-living-room.jpg" alt="Northern Lights" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Northern Lights</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-series="moss-covered-lava" data-categories="earthy,organic">
+                        <img src="img/nr1/aurora-whispers-bedroom.jpg" alt="Moss Covered Lava" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Moss Covered Lava</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item large" data-series="fjord-reflections" data-categories="ethereal,atmospheric">
+                        <img src="img/nr1/aurora-whispers-office.jpg" alt="Fjord Reflections" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Fjord Reflections</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-series="hot-springs" data-categories="earthy,organic,atmospheric">
+                        <img src="img/nr1/aurora-whispers-detail.jpg" alt="Hot Springs" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Hot Springs</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Series Modal -->
+        <div id="series-modal" class="series-modal">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <h2 id="modal-title"></h2>
+                <div class="series-images">
+                    <div class="image-container">
+                        <img id="modal-image" src="" alt="">
+                    </div>
+                    <div class="series-nav">
+                        <button class="nav-btn" id="prev-btn">Previous</button>
+                        <span class="image-counter" id="image-counter"></span>
+                        <button class="nav-btn" id="next-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-credit">
+                    website made by <a href="https://vefstaedi.is" target="_blank">vefstaedi.is</a>
+                </div>
+                <div class="social">
+                    <a href="#" class="icon-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="icon-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:contact@oskart.com" class="icon-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery functionality
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('series-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalImage = document.getElementById('modal-image');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const imageCounter = document.getElementById('image-counter');
+
+        let currentSeries = null;
+        let currentImageIndex = 0;
+
+        // Series data - each series has 3-4 images
+        const seriesData = {
+            'aurora-whispers': {
+                title: 'Aurora Whispers',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-living-room.jpg', alt: 'Aurora Whispers - Living Room' },
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Aurora Whispers - Bedroom' },
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Aurora Whispers - Office' },
+                    { src: 'img/nr1/aurora-whispers-detail.jpg', alt: 'Aurora Whispers - Detail' }
+                ]
+            },
+            'nordic-light': {
+                title: 'Nordic Light',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Nordic Light - Bedroom' },
+                    { src: 'img/nr1/aurora-whispers-living-room.jpg', alt: 'Nordic Light - Living Room' },
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Nordic Light - Office' }
+                ]
+            },
+            'volcanic-textures': {
+                title: 'Volcanic Textures',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Volcanic Textures - Office' },
+                    { src: 'img/nr1/aurora-whispers-detail.jpg', alt: 'Volcanic Textures - Detail' },
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Volcanic Textures - Bedroom' }
+                ]
+            },
+            'icelandic-dreams': {
+                title: 'Icelandic Dreams',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-detail.jpg', alt: 'Icelandic Dreams - Detail' },
+                    { src: 'img/nr1/aurora-whispers-living-room.jpg', alt: 'Icelandic Dreams - Living Room' },
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Icelandic Dreams - Bedroom' }
+                ]
+            },
+            'midnight-sun': {
+                title: 'Midnight Sun',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-living-room.jpg', alt: 'Midnight Sun - Living Room' },
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Midnight Sun - Bedroom' },
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Midnight Sun - Office' }
+                ]
+            },
+            'geothermal-waters': {
+                title: 'Geothermal Waters',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Geothermal Waters - Bedroom' },
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Geothermal Waters - Office' },
+                    { src: 'img/nr1/aurora-whispers-detail.jpg', alt: 'Geothermal Waters - Detail' }
+                ]
+            },
+            'glacier-movement': {
+                title: 'Glacier Movement',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Glacier Movement - Office' },
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Glacier Movement - Bedroom' },
+                    { src: 'img/nr1/aurora-whispers-living-room.jpg', alt: 'Glacier Movement - Living Room' }
+                ]
+            },
+            'basalt-columns': {
+                title: 'Basalt Columns',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-detail.jpg', alt: 'Basalt Columns - Detail' },
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Basalt Columns - Office' },
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Basalt Columns - Bedroom' }
+                ]
+            },
+            'northern-lights': {
+                title: 'Northern Lights',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-living-room.jpg', alt: 'Northern Lights - Living Room' },
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Northern Lights - Bedroom' },
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Northern Lights - Office' }
+                ]
+            },
+            'moss-covered-lava': {
+                title: 'Moss Covered Lava',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Moss Covered Lava - Bedroom' },
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Moss Covered Lava - Office' },
+                    { src: 'img/nr1/aurora-whispers-detail.jpg', alt: 'Moss Covered Lava - Detail' }
+                ]
+            },
+            'fjord-reflections': {
+                title: 'Fjord Reflections',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Fjord Reflections - Office' },
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Fjord Reflections - Bedroom' },
+                    { src: 'img/nr1/aurora-whispers-living-room.jpg', alt: 'Fjord Reflections - Living Room' }
+                ]
+            },
+            'hot-springs': {
+                title: 'Hot Springs',
+                images: [
+                    { src: 'img/nr1/aurora-whispers-detail.jpg', alt: 'Hot Springs - Detail' },
+                    { src: 'img/nr1/aurora-whispers-bedroom.jpg', alt: 'Hot Springs - Bedroom' },
+                    { src: 'img/nr1/aurora-whispers-office.jpg', alt: 'Hot Springs - Office' }
+                ]
+            }
+        };
+
+        function openSeries(seriesId) {
+            const series = seriesData[seriesId];
+            if (!series) return;
+            
+            currentSeries = seriesId;
+            currentImageIndex = 0;
+            modalTitle.textContent = series.title;
+            showImage(0);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            currentSeries = null;
+            currentImageIndex = 0;
+        }
+
+        function showImage(index) {
+            const series = seriesData[currentSeries];
+            if (!series || index < 0 || index >= series.images.length) return;
+            
+            currentImageIndex = index;
+            const image = series.images[index];
+            modalImage.src = image.src;
+            modalImage.alt = image.alt;
+            imageCounter.textContent = `${index + 1} / ${series.images.length}`;
+            
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === series.images.length - 1;
+        }
+
+        function nextImage() {
+            if (currentSeries) {
+                const series = seriesData[currentSeries];
+                const nextIndex = (currentImageIndex + 1) % series.images.length;
+                showImage(nextIndex);
+            }
+        }
+
+        function prevImage() {
+            if (currentSeries) {
+                const series = seriesData[currentSeries];
+                const prevIndex = currentImageIndex === 0 ? series.images.length - 1 : currentImageIndex - 1;
+                showImage(prevIndex);
+            }
+        }
+
+        // Event listeners for gallery items
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const seriesId = item.dataset.series;
+                openSeries(seriesId);
+            });
+        });
+
+        // Category filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    const itemCategories = item.dataset.categories.split(',');
+
+                    if (category === 'recent' || itemCategories.includes(category)) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s ease-in-out';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal event listeners
+        document.querySelector('.modal-close').addEventListener('click', closeModal);
+        prevBtn.addEventListener('click', prevImage);
+        nextBtn.addEventListener('click', nextImage);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('active')) return;
+            
+            switch(e.key) {
+                case 'Escape':
+                    closeModal();
+                    break;
+                case 'ArrowLeft':
+                    prevImage();
+                    break;
+                case 'ArrowRight':
+                    nextImage();
+                    break;
+            }
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
